@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.png">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<title>Recipe</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/recipe.css">
+<script type="text/javascript">function clickLogin(myOpen) {
+		if (document.getElementsByTagName('header').length) {
+			var obj = document.getElementsByTagName('header')[0];
+			var obj2=document.getElementsByClassName('userButton');
+			if (!myOpen && obj2.length) {
+				obj2[0].getElementsByClassName('open').length && (obj2[0].getElementsByClassName('open')[0].style.display=myOpen?'none':'block');
+				obj2[0].getElementsByClassName('close').length && (obj2[0].getElementsByClassName('close')[0].style.display=myOpen?'block':'none');
+			}
+			myOpen ? (obj.style.border='none') : (obj.style.borderBottom='1px solid #eaecf0');
+  			['login','authorized'].forEach(function(val) { obj.getElementsByClassName(val).length && (obj.getElementsByClassName(val)[0].style.display=myOpen?'block':'none'); });
+			obj.getElementsByClassName('container').length && (obj.getElementsByClassName('container')[0].style.height=myOpen?'auto':'100px');
+			obj.getElementsByClassName('search').length && (obj.getElementsByClassName('search')[0].style.display=myOpen?'none':'flex');
+			if (myOpen && obj2.length) {
+				obj2[0].getElementsByClassName('open').length && (obj2[0].getElementsByClassName('open')[0].style.display=myOpen?'none':'block');
+				obj2[0].getElementsByClassName('close').length && (obj2[0].getElementsByClassName('close')[0].style.display=myOpen?'block':'none');
+			}
+		}
+	}
+	</script></head>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="container">
+            <a href="https://www.onlinerecipesbook.com/" class="logo"><img src="https://img.onlinerecipesbook.com/imgs/1Logo_cooking_onlinerecipes-01.png" alt=""></a>
+            <div class="search" style="display: flex;">
+                <form id="searchForm">
+                    <input type="search" id="search" placeholder="Search" name="search" value="" maxlength="15">
+                    <input type="submit" value="">
+                </form>
+            </div>
+            <button class="userButton">
+                <img class="open" src="https://img.onlinerecipesbook.com/imgs/user.png" alt="" onclick="clickLogin(true);">
+                <img class="close" src="https://img.onlinerecipesbook.com/imgs/close.png" alt="" onclick="clickLogin(false);">
+            </button>
+            <div class="login">
+                <form id="authenticationForm" action="https://www.onlinerecipesbook.com/?page=" method="post">
+                    <!--<input type="hidden" name="page" value="">-->
+                    <input type="text" id="userName" name="u" value="" placeholder="User" maxlength="22">
+                    <input type="password" id="userPassword" name="c" placeholder="Password" maxlength="12">
+                    <input type="submit" id="authentication" value="Login" name="authentication">
+                    <div class="getPremium">
+                        <span class="text">Don’t have an account?</span>
+                        <a href="https://www.onlinerecipesbook.com/?page=getPremium" class="getAccess">Get access to premium</a>
+                    </div>
+                    <div class="getPremium" style=" margin-top: 15px">
+                        <a style="background: #e6990c;" href="https://www.onlinerecipesbook.com/?page=getPremium" class="getAccess">Cancel Subscription</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+     <div class="clearfix"></div></header>
+	<main>
+		<section class="premiumRecipe container">
+			<div class="img">
+				<img src="imgs/1.jpg" alt="">
+			</div>
+			<div class="recipe">
+				<h2>The best vegan burger</h2>
+				<p class="description">Packed with flavour, these vegan corn burgers are healthy and seriously satisfying. 
+Packed with flavour, these vegan corn burgers are healthy and seriously satisfying. 
+Packed with flavour, these vegan corn burgers are healthy and seriously satisfying. 
+Packed with flavour, these vegan corn burgers are healthy and seriously satisfying.
+Packed with flavour, these vegan corn burgers are healthy and seriously satisfying. 
+Packed with flavour, these vegan corn burgers are healthy and seriously satisfying. </p>
+				<p class="seeFullRecipe">To see the full recipe please login and get access!</p>
+				<a class="getAccessLink" href="getPremium.html">Get access to premium</a>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<a href="index.html" class="logo"><img src="imgs/1Logo_cooking-01.png" alt=""></a>
+		<div class="links">
+			<a href="contactUs.html">Contact us</a>
+			<a href="policy.html">Privacy Policy</a>
+			<a href="terms.html">Terms &amp; Conditions</a>
+		</div>
+	</footer>
+</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
