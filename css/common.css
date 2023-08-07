@@ -600,3 +600,7 @@ svg {
 		font-weight: 600;
 	}
 }
+
+.footer-contact li span{
+	color: rgb(104, 104, 104);
+}
